@@ -21,8 +21,10 @@ const Header = ({cartData}) => {
   onClick={()=>setOpenSidebar(true)}><IoMenu/></h1>
   <img src="/logo.png" className="h-10"/> <h1 className="font-bold text-2xl">Shopper</h1></div>  
   
-  <div className="hidden md:block">
- <MenuLinks activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
+    <div className="hidden md:flex">
+    <MenuLinks  setOpenSidebar={setOpenSidebar}
+      activeCategory={activeCategory} 
+      setActiveCategory={setActiveCategory}/>
   </div>
   
   <div className="flex gap-3 items-center ">
